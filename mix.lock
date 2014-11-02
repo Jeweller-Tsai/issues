@@ -1,0 +1,7 @@
+%{"earmark": {:package, "0.1.10"},
+  "ex_doc": {:package, "0.6.1"},
+  "exjsx": {:package, "3.0.0"},
+  "hackney": {:package, "0.14.3"},
+  "httpoison": {:package, "0.5.0"},
+  "idna": {:package, "1.0.1"},
+  "jsx": {:package, "2.1.1"}}

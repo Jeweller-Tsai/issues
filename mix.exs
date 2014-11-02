@@ -5,26 +5,26 @@ defmodule Issues.Mixfile do
     [app: :issues,
      version: "0.0.1",
      elixir: "~> 1.0.0",
+     name: "Issues",
+     source_url: "https://github.com/Jeweller-Tsai/issues",
+     escript: escript_config,
      deps: deps]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpoison, :exjsx]]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      { :httpoison, "~> 0.5" },
+      { :exjsx, "~> 3.0" },
+      { :ex_doc, "~> 0.6" },
+      { :earmark, ">= 0.0.0" },
+    ]
+  end
+
+  defp escript_config do
+    [main_module: Issues.CLI]
   end
 end
